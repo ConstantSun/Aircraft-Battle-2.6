@@ -4,12 +4,12 @@
 int main(int argc, char* argv[])
 {
     srand (time(NULL));
-	bool is_quit = false;
-	if (!init())
+    bool is_quit = false;
+    if (!init())
     {
-		cout << "can't initialize SDL !!! " << endl;
-		return 0 ;
-	}
+	cout << "can't initialize SDL !!! " << endl;
+	return 0 ;
+    }
     rect_background.x = rect_background.y = 0; rect_background.w = SCREEN_WIDTH;  rect_background.h = SCREEN_HEIGHT;
 	SDL_General::LoadBackGround(g_renderer) ;
     static SDL_Rect rectPress { rectPress.x = 65 ,  rectPress.y = 327 ,   rectPress.w = 458 , rectPress.h = 88  }  ;
@@ -112,7 +112,7 @@ int main(int argc, char* argv[])
 	}
 	// End Game Information : Showing Game Over 3 times and shut down Game, turn to  window Console.
     Mix_HaltChannel(-1);
-	Mix_PlayChannel(-1, g_end_music ,0);
+    Mix_PlayChannel(-1, g_end_music ,0);
     int i=0,times=0;
     is_quit = false ;
     gModulatedTexture.setColor(255,0,0);
